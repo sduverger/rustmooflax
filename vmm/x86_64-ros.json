@@ -1,0 +1,14 @@
+{
+    "llvm-target": "x86_64-unknown-none",
+    "data-layout": "e-m:e-i64:64-f80:128-n8:16:32:64-S128",
+    "linker-flavor": "gcc",
+    "target-endian": "little",
+    "target-pointer-width": "64",
+    "arch": "x86_64",
+    "os": "none",
+    "panic-strategy": "abort",
+    "disable-redzone": true,
+    "code-model": "small",
+    "position_independent_executables": true,
+    "features": "-mmx,-sse,-sse2,-sse3,-ssse3,-sse4.1,-sse4.2,-sse4a,-avx,-avx2,-avx512cd,-avx512er,-avx512f,-avx512pf,,-aes,-pclmul,-fsgsbase,-rdrnd,-f16c,-fma,-fma4,-xop,-3dnow,-popcnt,-bmi,-bmi2,-lzcnt,-tbm,+soft-float"
+}

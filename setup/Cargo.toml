@@ -1,0 +1,23 @@
+[package]
+name = "setup"
+version = "0.1.0"
+authors = ["Stephane Duverger <stephane.duverger@gmail.com>"]
+
+[lib]
+crate-type = ["staticlib"]
+
+[dependencies]
+rlibc = "1.0"
+spin = "0.4.5"
+multiboot = "0.2.0"
+x86_64 = "0.1.2"
+
+[features]
+default = []
+
+debug_vmcs_setup = []
+
+
+[dependencies.share]
+path = "../share"
+features = ["setup"]

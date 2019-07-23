@@ -1,0 +1,31 @@
+[package]
+name = "vmm"
+version = "0.1.0"
+authors = ["Stephane Duverger <stephane.duverger@gmail.com>"]
+
+[lib]
+crate-type = ["staticlib"]
+
+[features]
+default = ["debug_vm_access_write",
+           "debug_vm_access_read",
+           "debug_excp",
+           "debug_rmode",
+           "debug_reason",
+           ]
+
+debug_excp = []
+debug_reason = []
+debug_rmode = []
+debug_vm_access_read = []
+debug_vm_access_write = []
+debug_vmread = []
+debug_vmwrite = []
+
+[dependencies]
+bitfield = "0.12.0"
+
+[dependencies.share]
+path = "../share"
+features = ["vmm", "debug_vmwrite", "debug_vmread"]
+
